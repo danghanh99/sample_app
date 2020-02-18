@@ -93,6 +93,7 @@ end
 
 # Defines a proto-feed.
 
+# Returns a user's status feed.
 def feed
   following_ids = "SELECT followed_id FROM relationships
                    WHERE  follower_id = :user_id"
