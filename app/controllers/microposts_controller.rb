@@ -19,6 +19,8 @@ class MicropostsController < ApplicationController
   end   
   
   def show
+    @micropost = Micropost.find(params[:id])
+    render 'show'
   end   
   
   def edit
