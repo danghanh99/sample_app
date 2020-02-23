@@ -29,8 +29,8 @@ class MicropostsController < ApplicationController
   end  
   
   def update  
-    @post = Micropost.find(params[:id])
-    if @post.update_attributes(params.require(:micropost).permit(:content, :picture))
+    @micropost = Micropost.find(params[:id])
+    if @micropost.update_attributes(params.require(:micropost).permit(:content, :picture))
     redirect_to root_url
   end
 
